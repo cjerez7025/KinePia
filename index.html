@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pia & Romy - Kinesiología Deportiva & Movimiento</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showPage('home')">
+                <svg viewBox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="60" cy="60" r="12" fill="#FF6FA4">
+                        <animate attributeName="cy" values="50;70;50" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <path d="M40 80 C30 55, 50 35, 60 55 C70 75, 85 35, 100 55" 
+                          stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round">
+                        <animate attributeName="stroke-width" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                    </path>
+                    <text x="120" y="70" font-family="Poppins, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" opacity="0">
+                        Pia &amp; Romy
+                        <animate attributeName="opacity" from="0" to="1" dur="1.5s" begin="0.5s" fill="freeze"/>
+                    </text>
+                    <text x="120" y="100" font-family="Poppins, sans-serif" font-size="14" fill="#FFFFFF" opacity="0">
+                        Kinesiología Deportiva &amp; Movimiento
+                        <animate attributeName="opacity" from="0" to="1" dur="1.5s" begin="0.8s" fill="freeze"/>
+                    </text>
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="showPage('home'); scrollToServices()">
+                                    <i class="bi bi-bandaid"></i> Rehabilitación
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="showPage('home'); scrollToServices()">
+                                    <i class="bi bi-lightning-charge"></i> Entrenamiento
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('education')">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('home'); scrollToAbout()">Sobre Nosotras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('home'); scrollToFooter()">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active" style="padding-top: 76px;">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 hero-content">
+                        <h1>Recupera tu Movimiento, <br>Supera tus Límites</h1>
+                        <p>Kinesiología deportiva profesional con enfoque personalizado. Rehabilitación, entrenamiento y educación para alcanzar tu máximo potencial.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary-custom btn-hero me-3" onclick="showPage('education')">
+                                Ver Cursos
+                            </button>
+                            <button class="btn btn-outline-custom btn-hero" onclick="scrollToServices()">
+                                Conocer Servicios
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nuestros Servicios</h2>
+                    <p>Soluciones integrales para tu recuperación y rendimiento</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-bandaid-fill"></i>
+                            </div>
+                            <h3>Rehabilitación</h3>
+                            <p>Recuperación funcional tras lesiones deportivas o cirugías. Tratamiento personalizado basado en evidencia científica.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill"></i> Evaluación biomecánica completa</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Terapia manual especializada</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ejercicios terapéuticos progresivos</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Prevención de recaídas</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Seguimiento post-alta</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+                            <h3>Entrenamiento Deportivo</h3>
+                            <p>Optimiza tu rendimiento con programas de entrenamiento funcional y prevención de lesiones.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill"></i> Entrenamiento de fuerza y potencia</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Mejora de movilidad y flexibilidad</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Acondicionamiento deportivo</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Corrección de patrones de movimiento</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Planes personalizados por objetivos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programa Rendimiento Section -->
+        <section id="programa-rendimiento" class="programa-rendimiento">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="programa-header">
+                            <span class="programa-badge">Programa Destacado</span>
+                            <h2 class="programa-title">PROGRAMA RENDIMIENTO</h2>
+                            <p class="programa-subtitle">Apoyo profesional integral para deportistas amateur, profesionales y usuarios activos</p>
+                        </div>
+                        
+                        <div class="programa-description">
+                            <p>El Programa de Rendimiento surge ante la necesidad de contar con apoyo profesional idóneo en la carrera de deportistas, como también en usuarios que vean la actividad física y el ejercicio como parte de su día a día.</p>
+                            <p>Liderado por kinesiólogas expertas en el área deportiva y traumatológica, busca <strong>mejorar el rendimiento</strong>, <strong>disminuir el riesgo de lesiones</strong> y generar un <strong>trabajo de reintegro deportivo</strong> cuando sea necesario.</p>
+                        </div>
+                        
+                        <div class="programa-price-box">
+                            <div class="price-tag">
+                                <span class="price-label">Inversión Mensual</span>
+                                <span class="price-amount">$70.000</span>
+                            </div>
+                            <button class="btn btn-programa" onclick="scrollToFooter()">
+                                Solicitar Información
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="programa-note">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <span><strong>Servicios adicionales:</strong> Kinesiología presencial y online, entrenamiento presencial grupal e individual.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <!-- Pilares -->
+                        <div class="pilares-section">
+                            <h3 class="pilares-title">
+                                <i class="bi bi-star-fill"></i>
+                                Los 3 Pilares del Programa
+                            </h3>
+                            <div class="pilares-grid">
+                                <div class="pilar-card">
+                                    <div class="pilar-icon">
+                                        <i class="bi bi-calendar-check-fill"></i>
+                                    </div>
+                                    <h4>Planificación Personalizada</h4>
+                                    <p>Programación de entrenamiento adaptada a tus objetivos y disciplina</p>
+                                </div>
+                                
+                                <div class="pilar-card">
+                                    <div class="pilar-icon">
+                                        <i class="bi bi-shield-fill-check"></i>
+                                    </div>
+                                    <h4>Prevención de Lesiones</h4>
+                                    <p>Estrategias y herramientas para disminuir el riesgo de lesión</p>
+                                </div>
+                                
+                                <div class="pilar-card">
+                                    <div class="pilar-icon">
+                                        <i class="bi bi-chat-dots-fill"></i>
+                                    </div>
+                                    <h4>Coaching Continuo</h4>
+                                    <p>Asesoría, educación y acompañamiento en todo el proceso</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Metodología -->
+                        <div class="metodologia-section">
+                            <h3 class="metodologia-title">
+                                <i class="bi bi-gear-fill"></i>
+                                Metodología
+                            </h3>
+                            <div class="metodologia-steps">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>Evaluación Integral</h5>
+                                        <p>Entrevista + Evaluación de composición física + Evaluación kinésica</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5>Planificación de Entrenamiento</h5>
+                                        <p>Basado en tus objetivos y contexto. Uso de app BridgeAthletic</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5>Coaching y Asesoría</h5>
+                                        <p>Comunicación permanente y educación en el proceso</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <div class="about-image">
+                            <i class="bi bi-person-arms-up"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="mb-4">Sobre Nosotras - Pia & Romy</h2>
+                        <p class="lead mb-4">
+                            Somos kinesiólogas especializadas en rehabilitación deportiva y entrenamiento funcional. 
+                            Nuestra pasión por el deporte y el movimiento humano nos llevó a dedicarnos a ayudar a 
+                            deportistas y personas activas a recuperarse de lesiones y alcanzar su máximo potencial.
+                        </p>
+                        <p class="mb-4">
+                            Con formación continua en biomecánica, terapia manual y entrenamiento de alto rendimiento, 
+                            ofrecemos un enfoque integral que combina la evidencia científica más reciente con 
+                            técnicas personalizadas para cada paciente.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-md-4 mb-3">
+                                <div class="stat-card">
+                                    <div class="stat-number">800+</div>
+                                    <div class="stat-label">Pacientes Atendidos</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="stat-card">
+                                    <div class="stat-number">8+</div>
+                                    <div class="stat-label">Años de Experiencia</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="stat-card">
+                                    <div class="stat-number">20+</div>
+                                    <div class="stat-label">Certificaciones</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Education Page -->
+    <div id="education" class="page" style="padding-top: 156px;">
+        <section class="education">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Cursos Online</h2>
+                    <p>Aprende las técnicas y conocimientos que usamos con nuestros pacientes</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Course 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <i class="bi bi-journal-medical"></i>
+                                <span class="course-badge">Nuevo</span>
+                            </div>
+                            <div class="course-content">
+                                <span class="course-category">Rehabilitación</span>
+                                <h3>Recuperación de Lesiones de Rodilla</h3>
+                                <p>Protocolo completo de rehabilitación para lesiones de LCA, menisco y condromalacia rotuliana. Incluye ejercicios progresivos y consejos profesionales.</p>
+                                <div class="course-meta">
+                                    <span><i class="bi bi-clock"></i> 8 horas</span>
+                                    <span><i class="bi bi-play-circle"></i> 24 clases</span>
+                                    <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                </div>
+                                <div class="course-price">$79.99</div>
+                                <button class="btn btn-course" onclick="alert('Sistema de pago en desarrollo')">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image" style="background: linear-gradient(135deg, #FF6B9D, #F97316);">
+                                <i class="bi bi-heart-pulse"></i>
+                                <span class="course-badge">Popular</span>
+                            </div>
+                            <div class="course-content">
+                                <span class="course-category">Entrenamiento</span>
+                                <h3>Entrenamiento Funcional desde Casa</h3>
+                                <p>Aprende a entrenar de forma efectiva sin equipamiento. Ejercicios progresivos para mejorar fuerza, movilidad y resistencia cardiovascular.</p>
+                                <div class="course-meta">
+                                    <span><i class="bi bi-clock"></i> 10 horas</span>
+                                    <span><i class="bi bi-play-circle"></i> 30 clases</span>
+                                    <span><i class="bi bi-star-fill"></i> 5.0</span>
+                                </div>
+                                <div class="course-price">$89.99</div>
+                                <button class="btn btn-course" onclick="alert('Sistema de pago en desarrollo')">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image" style="background: linear-gradient(135deg, #10B981, #059669);">
+                                <i class="bi bi-body-text"></i>
+                            </div>
+                            <div class="course-content">
+                                <span class="course-category">Prevención</span>
+                                <h3>Prevención de Lesiones Deportivas</h3>
+                                <p>Estrategias científicas para prevenir las lesiones más comunes en deportistas. Evaluación de riesgos y ejercicios preventivos específicos.</p>
+                                <div class="course-meta">
+                                    <span><i class="bi bi-clock"></i> 6 horas</span>
+                                    <span><i class="bi bi-play-circle"></i> 18 clases</span>
+                                    <span><i class="bi bi-star-fill"></i> 4.8</span>
+                                </div>
+                                <div class="course-price">$69.99</div>
+                                <button class="btn btn-course" onclick="alert('Sistema de pago en desarrollo')">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">
+                                <i class="bi bi-activity"></i>
+                            </div>
+                            <div class="course-content">
+                                <span class="course-category">Rehabilitación</span>
+                                <h3>Dolor Lumbar: Evaluación y Tratamiento</h3>
+                                <p>Comprende las causas del dolor lumbar y aprende técnicas efectivas de autotratamiento y ejercicios específicos para recuperación completa.</p>
+                                <div class="course-meta">
+                                    <span><i class="bi bi-clock"></i> 7 horas</span>
+                                    <span><i class="bi bi-play-circle"></i> 22 clases</span>
+                                    <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                </div>
+                                <div class="course-price">$74.99</div>
+                                <button class="btn btn-course" onclick="alert('Sistema de pago en desarrollo')">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image" style="background: linear-gradient(135deg, #F59E0B, #D97706);">
+                                <i class="bi bi-bicycle"></i>
+                            </div>
+                            <div class="course-content">
+                                <span class="course-category">Rendimiento</span>
+                                <h3>Optimización del Rendimiento Deportivo</h3>
+                                <p>Técnicas avanzadas para mejorar tu rendimiento: periodización, recuperación activa, nutrición deportiva y gestión de la fatiga.</p>
+                                <div class="course-meta">
+                                    <span><i class="bi bi-clock"></i> 12 horas</span>
+                                    <span><i class="bi bi-play-circle"></i> 36 clases</span>
+                                    <span><i class="bi bi-star-fill"></i> 4.7</span>
+                                </div>
+                                <div class="course-price">$99.99</div>
+                                <button class="btn btn-course" onclick="alert('Sistema de pago en desarrollo')">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image" style="background: linear-gradient(135deg, #EC4899, #DB2777);">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+                            <div class="course-content">
+                                <span class="course-category">Movilidad</span>
+                                <h3>Movilidad y Flexibilidad Integral</h3>
+                                <p>Programa completo de movilidad articular y flexibilidad muscular. Rutinas diarias para mejorar rango de movimiento y prevenir lesiones.</p>
+                                <div class="course-meta">
+                                    <span><i class="bi bi-clock"></i> 5 horas</span>
+                                    <span><i class="bi bi-play-circle"></i> 15 clases</span>
+                                    <span><i class="bi bi-star-fill"></i> 5.0</span>
+                                </div>
+                                <div class="course-price">$59.99</div>
+                                <button class="btn btn-course" onclick="alert('Sistema de pago en desarrollo')">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="12" fill="#FF6FA4">
+                                <animate attributeName="cy" values="50;70;50" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <path d="M40 80 C30 55, 50 35, 60 55 C70 75, 85 35, 100 55" 
+                                  stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round">
+                                <animate attributeName="stroke-width" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                            </path>
+                            <text x="120" y="70" font-family="Poppins, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" opacity="0">
+                                Pia &amp; Romy
+                                <animate attributeName="opacity" from="0" to="1" dur="1.5s" begin="0.5s" fill="freeze"/>
+                            </text>
+                            <text x="120" y="100" font-family="Poppins, sans-serif" font-size="14" fill="#FFFFFF" opacity="0">
+                                Kinesiología Deportiva &amp; Movimiento
+                                <animate attributeName="opacity" from="0" to="1" dur="1.5s" begin="0.8s" fill="freeze"/>
+                            </text>
+                        </svg>
+                    </div>
+                    <p class="mb-4">Tu bienestar es nuestra prioridad. Kinesiología deportiva profesional con enfoque personalizado para cada paciente.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Enlaces</h5>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('home')"><i class="bi bi-chevron-right"></i> Home</a></li>
+                        <li><a href="#" onclick="showPage('home'); scrollToServices()"><i class="bi bi-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#" onclick="showPage('education')"><i class="bi bi-chevron-right"></i> Cursos</a></li>
+                        <li><a href="#" onclick="showPage('home'); scrollToAbout()"><i class="bi bi-chevron-right"></i> Sobre Nosotras</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Servicios</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Rehabilitación</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Entrenamiento</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Terapia Manual</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Evaluación Biomecánica</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contacto</h5>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-geo-alt-fill"></i> Valparaíso, Chile</li>
+                        <li><i class="bi bi-telephone-fill"></i> +56 9 4911 3727</li>
+                        <li><i class="bi bi-envelope-fill"></i> kine.pia.vallejos@gmail.com</li>
+                        <li><i class="bi bi-clock-fill"></i> Lun-Vie: 8:00 - 20:00</li>
+                        <li><i class="bi bi-instagram"></i> @kine.pia.vallejos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2024 Pia & Romy. Todos los derechos reservados. | Diseñado con <i class="bi bi-heart-fill" style="color: var(--secondary-color);"></i> para tu bienestar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
