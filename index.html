@@ -16,59 +16,8 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- CSS adicional para GSAP -->
-    <style>
-        /* Ocultar elementos antes de la animación */
-        .navbar {
-            opacity: 0;
-            transform: translateY(-100px);
-        }
-        
-        .nav-link,
-        .navbar-brand,
-        .navbar-toggler {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        
-        /* Barra de progreso de scroll */
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #FF6B9D 0%, #14B8A6 50%, #10B981 100%);
-            width: 0%;
-            z-index: 9999;
-            box-shadow: 0 2px 10px rgba(255, 107, 157, 0.5);
-        }
-        
-        /* Efecto glassmorphism para navbar scrolled */
-        .navbar.navbar-scrolled {
-            background: rgba(20, 184, 166, 0.85) !important;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        /* Animación del dropdown */
-        .dropdown-menu {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            overflow: hidden;
-        }
-        
-        .dropdown-item {
-            transition: all 0.3s ease;
-        }
-    </style>
 </head>
 <body>
-    <!-- Barra de progreso de scroll -->
-    <div class="scroll-progress"></div>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -105,18 +54,18 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="#" onclick="showPage('home'); setTimeout(scrollToServices, 300)">
+                                <a class="dropdown-item" href="#" onclick="showPage('home'); scrollToServices()">
                                     <i class="bi bi-bandaid"></i> Rehabilitación
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#" onclick="showPage('home'); setTimeout(scrollToServices, 300)">
+                                <a class="dropdown-item" href="#" onclick="showPage('home'); scrollToServices()">
                                     <i class="bi bi-lightning-charge"></i> Entrenamiento
                                 </a>
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item" href="#" onclick="showPage('home'); setTimeout(scrollToPrograma, 300)">
+                                <a class="dropdown-item" href="#" onclick="showPage('home'); scrollToPrograma()">
                                     <i class="bi bi-trophy-fill"></i> Programa de Rendimiento
                                 </a>
                             </li>
@@ -126,10 +75,10 @@
                         <a class="nav-link" href="#" onclick="showPage('education')">Educación</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('home'); setTimeout(scrollToAbout, 300)">Sobre Nosotras</a>
+                        <a class="nav-link" href="#" onclick="showPage('home'); scrollToAbout()">Sobre Nosotras</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('home'); setTimeout(scrollToFooter, 300)">Contacto</a>
+                        <a class="nav-link" href="#" onclick="showPage('home'); scrollToFooter()">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -223,9 +172,9 @@
                                 <span class="price-label">Inversión Mensual</span>
                                 <span class="price-amount">$70.000</span>
                             </div>
-                            <button class="btn btn-programa" onclick="scrollToFooter()">
+                            <button class="btn btn-programa" onclick="abrirWhatsApp()">
                                 Solicitar Información
-                                <i class="bi bi-arrow-right ms-2"></i>
+                                <i class="bi bi-whatsapp ms-2"></i>
                             </button>
                         </div>
                         
@@ -372,7 +321,7 @@
                             <div class="course-content">
                                 <span class="course-category">Rehabilitación</span>
                                 <h3>Recuperación de Lesiones de Rodilla</h3>
-                                <p>Protocolo completo de rehabilitación para lesiones de LCA, menisco y condromalacia rotuliana.</p>
+                                <p>Protocolo completo de rehabilitación para lesiones de LCA, menisco y condromalacia rotuliana. Incluye ejercicios progresivos y consejos profesionales.</p>
                                 <div class="course-meta">
                                     <span><i class="bi bi-clock"></i> 8 horas</span>
                                     <span><i class="bi bi-play-circle"></i> 24 clases</span>
@@ -396,7 +345,7 @@
                             <div class="course-content">
                                 <span class="course-category">Entrenamiento</span>
                                 <h3>Entrenamiento Funcional desde Casa</h3>
-                                <p>Aprende a entrenar de forma efectiva sin equipamiento.</p>
+                                <p>Aprende a entrenar de forma efectiva sin equipamiento. Ejercicios progresivos para mejorar fuerza, movilidad y resistencia cardiovascular.</p>
                                 <div class="course-meta">
                                     <span><i class="bi bi-clock"></i> 10 horas</span>
                                     <span><i class="bi bi-play-circle"></i> 30 clases</span>
@@ -419,7 +368,7 @@
                             <div class="course-content">
                                 <span class="course-category">Prevención</span>
                                 <h3>Prevención de Lesiones Deportivas</h3>
-                                <p>Estrategias científicas para prevenir las lesiones más comunes.</p>
+                                <p>Estrategias científicas para prevenir las lesiones más comunes en deportistas. Evaluación de riesgos y ejercicios preventivos específicos.</p>
                                 <div class="course-meta">
                                     <span><i class="bi bi-clock"></i> 6 horas</span>
                                     <span><i class="bi bi-play-circle"></i> 18 clases</span>
@@ -442,7 +391,7 @@
                             <div class="course-content">
                                 <span class="course-category">Rehabilitación</span>
                                 <h3>Dolor Lumbar: Evaluación y Tratamiento</h3>
-                                <p>Comprende las causas del dolor lumbar y técnicas efectivas.</p>
+                                <p>Comprende las causas del dolor lumbar y aprende técnicas efectivas de autotratamiento y ejercicios específicos para recuperación completa.</p>
                                 <div class="course-meta">
                                     <span><i class="bi bi-clock"></i> 7 horas</span>
                                     <span><i class="bi bi-play-circle"></i> 22 clases</span>
@@ -465,7 +414,7 @@
                             <div class="course-content">
                                 <span class="course-category">Rendimiento</span>
                                 <h3>Optimización del Rendimiento Deportivo</h3>
-                                <p>Técnicas avanzadas para mejorar tu rendimiento deportivo.</p>
+                                <p>Técnicas avanzadas para mejorar tu rendimiento: periodización, recuperación activa, nutrición deportiva y gestión de la fatiga.</p>
                                 <div class="course-meta">
                                     <span><i class="bi bi-clock"></i> 12 horas</span>
                                     <span><i class="bi bi-play-circle"></i> 36 clases</span>
@@ -488,7 +437,7 @@
                             <div class="course-content">
                                 <span class="course-category">Movilidad</span>
                                 <h3>Movilidad y Flexibilidad Integral</h3>
-                                <p>Programa completo de movilidad articular y flexibilidad.</p>
+                                <p>Programa completo de movilidad articular y flexibilidad muscular. Rutinas diarias para mejorar rango de movimiento y prevenir lesiones.</p>
                                 <div class="course-meta">
                                     <span><i class="bi bi-clock"></i> 5 horas</span>
                                     <span><i class="bi bi-play-circle"></i> 15 clases</span>
@@ -530,7 +479,7 @@
                             </text>
                         </svg>
                     </div>
-                    <p class="mb-4">Tu bienestar es nuestra prioridad. Kinesiología deportiva profesional con enfoque personalizado.</p>
+                    <p class="mb-4">Tu bienestar es nuestra prioridad. Kinesiología deportiva profesional con enfoque personalizado para cada paciente.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
@@ -542,9 +491,9 @@
                     <h5>Enlaces</h5>
                     <ul class="footer-links">
                         <li><a href="#" onclick="showPage('home')"><i class="bi bi-chevron-right"></i> Home</a></li>
-                        <li><a href="#" onclick="showPage('home'); setTimeout(scrollToServices, 300)"><i class="bi bi-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#" onclick="showPage('home'); scrollToServices()"><i class="bi bi-chevron-right"></i> Servicios</a></li>
                         <li><a href="#" onclick="showPage('education')"><i class="bi bi-chevron-right"></i> Cursos</a></li>
-                        <li><a href="#" onclick="showPage('home'); setTimeout(scrollToAbout, 300)"><i class="bi bi-chevron-right"></i> Sobre Nosotras</a></li>
+                        <li><a href="#" onclick="showPage('home'); scrollToAbout()"><i class="bi bi-chevron-right"></i> Sobre Nosotras</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -561,7 +510,7 @@
                     <ul class="footer-links">
                         <li><i class="bi bi-geo-alt-fill"></i> Valparaíso, Chile</li>
                         <li><i class="bi bi-telephone-fill"></i> +56 9 4911 3727</li>
-                        <li><i class="bi bi-envelope-fill"></i> kine.pia.vallejos@gmail.com</li>
+                        <li><i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a0103040f441a030b441c0b06060f0005192a0d070b030644090507">[email&#160;protected]</a></li>
                         <li><i class="bi bi-clock-fill"></i> Lun-Vie: 8:00 - 20:00</li>
                         <li><i class="bi bi-instagram"></i> @kine.pia.vallejos</li>
                     </ul>
@@ -576,11 +525,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- GSAP Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    
-    <!-- Custom JavaScript con GSAP -->
+    <!-- Custom JavaScript -->
     <script src="scripts.js"></script>
 </body>
 </html>
