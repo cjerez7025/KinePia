@@ -53,6 +53,13 @@ function scrollToServices() {
     }
 }
 
+function scrollToPrograma() {
+    const programaSection = document.getElementById('programa-rendimiento');
+    if (programaSection) {
+        programaSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 function scrollToAbout() {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
