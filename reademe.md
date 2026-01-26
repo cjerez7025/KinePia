@@ -55,14 +55,6 @@ El archivo `scripts.js` incluye solo funciones básicas de navegación (cambio d
 
 ---
 
-## 🚀 Cómo Usar
-
-1. Descarga los archivos
-2. Abre `index.html` en tu navegador
-3. (Opcional) Usa Live Server en VS Code
-
----
-
 ## 📱 Responsive Design
 
 Adaptado para móviles, tablets y desktop con media queries.
